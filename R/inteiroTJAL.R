@@ -8,7 +8,7 @@
 #' @import captchaSajAudio
 #' @return pdf of the decision downloaded to the working directory.
 #' @export
-testar_processo<-function(url) {
+testar_processoAL<-function(url) {
   arq_img<-"imagem.png"
   arq_aud<-"audio.mpg"
   folder_img <- dirname(arq_img)
@@ -41,7 +41,7 @@ inteiroTJAL<-function(url=NULL,cdacordao=NULL){
   
   for(i in seq_along(url)){
     POST(url[i],
-         body<-list(testar_processo(url[i])[2]),
+         body<-list(testar_processoAL(url[i])[2]),
          write_disk(paste0(cdacordao[i],".pdf"),overwrite = T))
     Sys.sleep(1)
   }
