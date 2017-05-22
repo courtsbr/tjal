@@ -2,7 +2,7 @@
 #'
 #' This function predicts captcha letters
 #' @param url a vector of url strings to access the decisions.
-#' @keywords tjsp court decisions
+#' @keywords tjal court decisions
 #' @import httr
 #' @import stringr
 #' @import captchaSajAudio
@@ -14,7 +14,7 @@ testar_processoAL<-function(url) {
   folder_img <- dirname(arq_img)
   folder_aud <- dirname(arq_aud)
   httr::handle_reset('http://www2.tjal.jus.br/cjsg/')
-  u0<-df$url[1]
+  u0<-url
   r0 <- httr::GET(u0)
   u_aud <- 'http://www2.tjal.jus.br/cjsg/somCaptcha.do'
   u_img <- 'http://www2.tjal.jus.br/cjsg/imagemCaptcha.do'
@@ -49,4 +49,4 @@ inteiroTJAL<-function(url=NULL,cdacordao=NULL){
 }
 
 #' @examples
-#' inteiroTJAL(df$url,df$cdacordao)
+#' inteiroTJAL(url,cdacordao)

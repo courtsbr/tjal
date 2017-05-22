@@ -6,13 +6,13 @@
 #' @param classes.value Código
 #' @param inicio  Data inicial
 #' @param fim  Data final
-#' @keywords tjsp
+#' @keywords tjal, judicial decisions, high court, alagoas
 #' @import XML
 #' @import httr
 #' @import stringr
 #' @export
 #' @examples
-#' tjsg_meta(livre="Lei Maria da Penha")
+#' tjalsg_meta(livre="Lei Maria da Penha")
 
 tjalsg_meta<-function(livre,quote=TRUE,classes.value="",inicio="",fim=""){
   set_config(config(ssl_verifypeer = FALSE ))
