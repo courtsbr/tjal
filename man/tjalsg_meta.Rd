@@ -4,12 +4,10 @@
 \alias{tjalsg_meta}
 \title{Função tjalsg_meta}
 \usage{
-tjalsg_meta(livre, quote = TRUE, classes.value = "", inicio = "",
+tjalsg_meta(BuscaLivre, quote = TRUE, classes.value = "", inicio = "",
   fim = "")
 }
 \arguments{
-\item{livre}{palavra ou texto a ser buscado nas ementas e nos acórdãos}
-
 \item{quote}{logical. Colocar a expressão entre aspas?}
 
 \item{classes.value}{Código}
@@ -17,11 +15,18 @@ tjalsg_meta(livre, quote = TRUE, classes.value = "", inicio = "",
 \item{inicio}{Data inicial}
 
 \item{fim}{Data final}
+
+\item{livre}{palavra ou texto a ser buscado nas ementas e nos acórdãos}
 }
 \description{
 Esta função extrai metadados das decisões de segundo grau do TJAL
 }
 \examples{
-tjsg_meta(livre="Lei Maria da Penha")
+tjalsg_meta(livre="Lei Maria da Penha")
 }
-\keyword{tjsp}
+\keyword{alagoas}
+\keyword{court,}
+\keyword{decisions,}
+\keyword{high}
+\keyword{judicial}
+\keyword{tjal,}

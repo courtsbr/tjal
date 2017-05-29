@@ -3,7 +3,7 @@
 export(inteiroTJAL)
 export(testar_processoAL)
 export(tjalsg_meta)
-import(XML)
 import(captchaSajAudio)
 import(httr)
 import(stringr)
+import(xml2)
