@@ -12,7 +12,7 @@
 #' @import stringr
 #' @export
 #' @examples
-#' tjalsg_meta(livre="Lei Maria da Penha")
+#' tjalsg_meta(BuscaLivre="Lei Maria da Penha")
 
 tjalsg_meta<-function(BuscaLivre,quote=TRUE,classes.value="",inicio="",fim=""){
   set_config(config(ssl_verifypeer = FALSE ))
@@ -33,7 +33,7 @@ tjalsg_meta<-function(BuscaLivre,quote=TRUE,classes.value="",inicio="",fim=""){
                dados.origensSelecionadas = "T", tipoDecisaoSelecionados = "A",
                #tipoDecisaoSelecionados = "", tipoDecisaoSelecionados = "",
                dados.ordenacao = "data")
-  if(quote==TRUE) livre<-deparse(livre)
+  if(quote==TRUE) BuscaLivre<-deparse(BuscaLivre)
   body[[1]]<-BuscaLivre
   body[[19]]<-classes.value ##
   body[[30]]<-inicio ## colocar a data no formato dd/mm/aaa
