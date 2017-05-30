@@ -22,7 +22,7 @@ tjalsg_meta(BuscaLivre, quote = TRUE, classes.value = "", inicio = "",
 Esta função extrai metadados das decisões de segundo grau do TJAL
 }
 \examples{
-tjalsg_meta(livre="Lei Maria da Penha")
+tjalsg_meta(BuscaLivre="Lei Maria da Penha")
 }
 \keyword{alagoas}
 \keyword{court,}
