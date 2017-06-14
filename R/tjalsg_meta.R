@@ -66,8 +66,8 @@ tjalsg_meta<-function(BuscaLivre,quote=TRUE,classes.value="",inicio="",fim=""){
       data.registro<-str_extract(meta,"Data\\sde.*?(?=\\s(Data|Ementa))")
       ementa<-str_extract(meta,"Ementa.*")
       processo<-str_extract(meta,"\\d+.*?(?=\\s)")
-      cdacordao<-xml_find_all(d,xpath="//@cdacordao") %>% xml_text(trim=T)
-
+      cdacordao <- xml_find_all(d, xpath = "//*[@class='downloadEmenta']/@cdacordao") %>% 
+        xml_text(trim = T)
       df1<-data.frame(pagina=i,assunto.processo,assunto.materia,relator,comarca,orgao.julgador,data.julgamento,data.registro,processo,ementa,cdacordao,stringsAsFactors = F)
       df<-rbind(df,df1)
     },
